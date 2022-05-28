@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Paraboly React Boilerplate</title>
+</head>
+
+<body style="overflow-x: hidden; margin: 0">
+    <div id="root"></div>
+
+    <!-- Dependencies -->
+    <% if (webpackConfig.mode == 'production') { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.1.0/umd/react.production.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.1.0/umd/react-dom.production.min.js"
+        crossorigin="anonymous"></script>
+    <% } else { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.1.0/umd/react.development.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.1.0/umd/react-dom.development.min.js"
+        crossorigin="anonymous"></script>
+    <% } %>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "bash"
+    args: ["-c", "docker pull gcr.io/safety-312614/safety-web:latest || exit 0"]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/safety-312614/safety-web:latest",
+        "--cache-from",
+        "gcr.io/safety-312614/safety-web:latest",
+        "."
+      ]
+images: ["gcr.io/safety-312614/safety-web:latest"] #test
+timeout: 900s
