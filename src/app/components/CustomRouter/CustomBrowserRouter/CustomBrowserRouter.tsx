@@ -11,11 +11,11 @@ interface CustomRouterProps {
 const CustomBrowserRouter = ({
   basename,
   children,
-  history,
+  history
 }: CustomRouterProps) => {
   const [state, setState] = React.useState({
     action: history.action,
-    location: history.location,
+    location: history.location
   });
 
   React.useLayoutEffect(() => history.listen(setState), [history]);
@@ -23,11 +23,12 @@ const CustomBrowserRouter = ({
   return (
     <Router
       basename={basename}
-      children={children}
       location={state.location}
       navigationType={state.action}
       navigator={history}
-    />
+    >
+      {children}
+    </Router>
   );
 };
 

@@ -82,27 +82,6 @@ const useStyles = makeStyles((theme: Theme) =>
     gap: {
       flex: "1 1 auto"
     },
-    "@keyframes bounce": {
-      "0%": { transform: "scale(1,1) translate(50%, -50%) translateY(5px)" },
-      "10%": {
-        transform: "scale(1.1,.9) translate(50%, -50%) translateY(5px)"
-      },
-      "30%": {
-        transform: "scale(.9,1.1) translate(50%, -50%) translateY(-3px)"
-      },
-      "50%": {
-        transform: "scale(1.05,.95) translate(50%, -50%) translateY(5px)"
-      },
-      "57%": {
-        transform: "scale(1,1) translate(50%, -50%) translateY(2px)"
-      },
-      "64%": {
-        transform: "scale(1,1) translate(50%, -50%) translateY(5px)"
-      },
-      "100%": {
-        transform: "scale(1,1) translate(50%, -50%) translateY(5px)"
-      }
-    },
     content: {
       flexGrow: 1,
       padding: theme.spacing(3)
