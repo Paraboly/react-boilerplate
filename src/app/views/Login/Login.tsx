@@ -3,7 +3,7 @@ import { Button, TextField, Typography } from "@mui/material";
 import { FaSpinner } from "react-icons/fa";
 import AuthService from "./services/AuthService";
 import APP_CONSTANTS from "@constants/app-constants";
-import { history } from "../../../index";
+import { history } from "../../App";
 import "./style.scss";
 
 const Login = (): JSX.Element => {

@@ -2,6 +2,16 @@
 
 > Paraboly react boilerplate web application repository.
 
+## TODO:
+- [x] Initial working version
+- [ ] Prettier config
+- [ ] Eslint config
+- [ ] Editor config
+- [ ] Haskey integration
+- [ ] Github actions
+- [ ] Fix multi-times hmr triggers
+- [ ] Refactoring webpack
+
 ## Installation
 
 1. Clone/download repo

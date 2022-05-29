@@ -27,6 +27,7 @@ export default abstract class AuthService {
     return new Promise((resolve) =>
       setTimeout(() => {
         localStorage.setItem("loginAt", new Date(1977).toISOString());
+        window.location.href = "";
         resolve();
       }, 1000)
     );
