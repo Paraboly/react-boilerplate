@@ -3,14 +3,19 @@
 > Paraboly react boilerplate web application repository.
 
 ## TODO:
+
 - [x] Initial working version
+- [x] Refactoring webpack
+- [ ] i18n support
+- [ ] Refactoring routing
+- [ ] Refactoring app navigation
+- [ ] Add lazy-loading support
 - [ ] Prettier config
 - [ ] Eslint config
 - [ ] Editor config
 - [ ] Haskey integration
 - [ ] Github actions
 - [ ] Fix multi-times hmr triggers
-- [ ] Refactoring webpack
 
 ## Installation
 
@@ -21,21 +26,29 @@
 
 ## Commands
 
-| Command              | Description                                                                   |
-| -------------------- | ----------------------------------------------------------------------------- |
-| `npm run start`      | (alias of `npm run start-dev`)                                                |
-| `npm run start-dev`  | Build app continuously (HMR enabled) and serve @ `http://localhost:${env.PORT \|\| 2999}`      |
-| `npm run start-prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:${env.PORT \|\| 2999}` |
-| `npm run build`      | Build app to `/dist/`                                                         |
-| `npm run test`       | Run tests                                                                     |
-| `npm run lint`       | Run linter                                                                    |
-| `npm run lint --fix` | Run linter and fix issues                                                     |
+| Command              | Description                                                                               |
+| -------------------- | ----------------------------------------------------------------------------------------- |
+| `npm run start`      | (alias of `npm run start-dev`)                                                            |
+| `npm run start-dev`  | Build app continuously (HMR enabled) and serve @ `http://localhost:${env.PORT \|\| 2999}` |
+| `npm run start-prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:9001`             |
+| `npm run build`      | Build app to `/dist/`                                                                     |
+| `npm run test`       | Run tests                                                                                 |
+| `npm run lint`       | Run linter                                                                                |
+| `npm run lint --fix` | Run linter and fix issues                                                                 |
 
 ---
-
-## Tech Stack
+## Features
+- Typescript, styled-components and scss support
+- Hot reload without page refresh
+- Home page, Login page and protected routes
+- Lazy loaded routes
+- Optimized production build by code splitting
+- i18n support
+- React 18, MUI 5 and Webpack 5
+## Technology Stack
 
 #### UI Dependency
+
 - **[React](https://facebook.github.io/react/)** (18.x)
 - **[ReactRouter](https://reactrouter.com/)** (5.x)
 - **[MUI](https://mui.com/)** (5.x)
