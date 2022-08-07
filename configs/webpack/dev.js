@@ -1,6 +1,5 @@
 const { resolve } = require("path");
 const { merge } = require("webpack-merge");
-const webpack = require("webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const commonConfig = require("./common");
 const env = require("dotenv").config({
@@ -16,7 +15,6 @@ module.exports = merge(commonConfig, {
     "./index.tsx"
   ],
   devServer: {
-    hot: true,
     port: PORT,
     historyApiFallback: {
       disableDotRule: true
@@ -30,8 +28,5 @@ module.exports = merge(commonConfig, {
     }
   },
   devtool: "cheap-module-source-map",
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(), // enable HMR globally
-    new ReactRefreshWebpackPlugin()
-  ]
+  plugins: [new ReactRefreshWebpackPlugin()]
 });

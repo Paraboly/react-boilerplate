@@ -1,7 +1,8 @@
 import React, { useEffect, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router";
 import { createBrowserHistory } from "history";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/styles";
 import PrivateRoute from "@components/CustomRouter/PrivateRoute/PrivateRoute";
 import CustomBrowserRouter from "@components/CustomRouter/CustomBrowserRouter/CustomBrowserRouter";
 import Login from "@views/Login/Login";
