@@ -34,7 +34,7 @@
 | `npm run build`      | Build app to `/dist/`                                                                     |
 | `npm run test`       | Run tests                                                                                 |
 | `npm run lint`       | Run linter                                                                                |
-| `npm run lint --fix` | Run linter and fix issues                                                                 |
+| `npm run lint -- --fix` | Run linter and fix issues                                                                 |
 
 ---
 ## Features
