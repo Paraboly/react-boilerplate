@@ -4,14 +4,12 @@
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  "plugins": [
-    "react-refresh/babel"
-  ],
   "env": {
+    "development": {
+      "plugins": ["react-refresh/babel"]
+    },
     "production": {
-      "presets": [
-        "minify"
-      ]
+      "presets": ["minify"]
     }
   }
 }

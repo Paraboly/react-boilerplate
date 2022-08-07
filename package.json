@@ -18,12 +18,11 @@
   "license": "MIT",
   "author": "SchemeSonic",
   "scripts": {
-    "build": "npm run clean-dist && webpack --config=configs/webpack/prod.js",
-    "clean-dist": "rimraf dist/*",
-    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
+    "build": "NODE_ENV=production rimraf dist/* && webpack --config=configs/webpack/prod.js",
     "start": "source $HOME/.nvm/nvm.sh; nvm use --delete-prefix; npm run start-dev",
-    "start-dev": "webpack serve --config=configs/webpack/dev.js --open",
-    "start-prod": "npm run build && node express.js",
+    "start-dev": "NODE_ENV=development webpack serve --config=configs/webpack/dev.js --open",
+    "start-prod": "NODE_ENV=production npm run build && node express.js",
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "test": "jest --coverage --watchAll --config=configs/jest.json"
   },
   "dependencies": {
@@ -56,6 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "babel-loader": "^8.2.5",
+    "babel-preset-minify": "^0.5.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.1",
