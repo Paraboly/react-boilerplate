@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import AppContainer from "@components/AppContainer/AppContainer";
-import AuthService from "@views/Login/services/AuthService";
+import AuthService from "@views/Login/services/Auth.service";
 
 interface PrivateRouteParams {
   component: React.ReactNode;

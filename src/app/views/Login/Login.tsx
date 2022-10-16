@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button, TextField, Typography } from "@mui/material";
 import { FaSpinner } from "react-icons/fa";
-import AuthService from "./services/AuthService";
-import APP_CONSTANTS from "@constants/app-constants";
+import AuthService from "./services/Auth.service";
+import APP_CONSTANT from "@constants/app.constant";
 import { history } from "../../App";
 import "./style.scss";
 
@@ -34,7 +34,7 @@ const Login = (): JSX.Element => {
         <div className="blurred-box"></div>
         <div className="login-title">
           <Typography variant="h4">Welcome</Typography>
-          <Typography variant="h6">{APP_CONSTANTS.APP_NAME}</Typography>
+          <Typography variant="h6">{APP_CONSTANT.APP_NAME}</Typography>
         </div>
         <div className="login-form">
           <Typography variant="h4">{t("login.sign_in")}</Typography>

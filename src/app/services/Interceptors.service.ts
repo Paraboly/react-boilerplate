@@ -5,7 +5,7 @@ import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 import LogRocket from "logrocket";
 import setupLogRocketReact from "logrocket-react";
-import AuthService from "@views/Login/services/AuthService";
+import AuthService from "@views/Login/services/Auth.service";
 import en_US from "@assets/i18n/en-US.json";
 import tr_TR from "@assets/i18n/tr-TR.json";
 

@@ -16,9 +16,9 @@ import clsx from "clsx";
 import React from "react";
 import { FaChevronLeft, FaSignOutAlt, FaBars, FaHome } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import AuthService from "@views/Login/services/AuthService";
+import AuthService from "@views/Login/services/Auth.service";
 import useStyles from "./style";
-import APP_CONSTANTS from "@constants/app-constants";
+import APP_CONSTANT from "@constants/app.constant";
 
 const AppContainer = ({
   component: Component
@@ -53,7 +53,7 @@ const AppContainer = ({
             <FaBars />
           </IconButton>
           <Typography variant="h6" noWrap>
-            {APP_CONSTANTS.APP_NAME}
+            {APP_CONSTANT.APP_NAME}
           </Typography>
           <div className={classes.gap}></div>
         </Toolbar>
