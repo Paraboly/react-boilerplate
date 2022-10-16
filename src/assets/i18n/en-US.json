@@ -1,0 +1,9 @@
+{
+    "common": "Loading",
+    "login": {
+        "sign_in": "Sign in",
+        "email": "Email",
+        "password": "Password",
+        "wrong_email_or_password": "Wrong email or password, please try again"
+    }
+}

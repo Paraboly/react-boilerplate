@@ -1,12 +1,16 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 import axios from "axios";
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 import LogRocket from "logrocket";
 import setupLogRocketReact from "logrocket-react";
 import AuthService from "@views/Login/services/AuthService";
+import en_US from "@assets/i18n/en-US.json";
+import tr_TR from "@assets/i18n/tr-TR.json";
 
 const TOKEN = "abc";
-abstract class InterceptersService {
+abstract class InterceptorsService {
   static registerAxiosInterceptors(): void {
     axios.interceptors.request.use(
       (config) => {
@@ -41,6 +45,16 @@ abstract class InterceptersService {
       setupLogRocketReact(LogRocket);
     }
   }
+
+  static initI18n() {
+    i18n.use(initReactI18next).init({
+      lng: "tr",
+      resources: {
+        en: { translation: en_US },
+        tr: { translation: tr_TR }
+      }
+    });
+  }
 }
 
-export default InterceptersService;
+export default InterceptorsService;

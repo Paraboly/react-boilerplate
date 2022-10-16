@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router";
 import { createBrowserHistory } from "history";
+import i18n from "i18next";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/styles";
 import PrivateRoute from "@components/CustomRouter/PrivateRoute/PrivateRoute";
@@ -26,7 +27,7 @@ const App = (): JSX.Element => {
   }, []);
 
   return (
-    <Suspense fallback={<div>Loading... </div>}>
+    <Suspense fallback={<div>{i18n.t<string>("common.loading")}... </div>}>
       <ThemeProvider theme={theme}>
         <CustomBrowserRouter history={history}>
           <Routes>

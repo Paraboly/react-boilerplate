@@ -6,7 +6,7 @@
 
 - [x] Initial working version
 - [x] Refactoring webpack
-- [ ] i18n support
+- [x] i18n support
 - [ ] Refactoring routing
 - [ ] Refactoring app navigation
 - [ ] Add lazy-loading support

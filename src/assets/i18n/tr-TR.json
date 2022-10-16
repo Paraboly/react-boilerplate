@@ -1,0 +1,9 @@
+{
+    "common": "Yükleniyor",
+    "login": {
+        "sign_in": "Giriş",
+        "email": "E-posta",
+        "password": "Şifre",
+        "wrong_email_or_password": "Hatalı e-posta veya şifre, lütfen tekrar deneyin."
+    }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button, TextField, Typography } from "@mui/material";
 import { FaSpinner } from "react-icons/fa";
 import AuthService from "./services/AuthService";
@@ -10,6 +11,7 @@ const Login = (): JSX.Element => {
   const [user, setUser] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const { t } = useTranslation();
 
   const login = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -35,7 +37,7 @@ const Login = (): JSX.Element => {
           <Typography variant="h6">{APP_CONSTANTS.APP_NAME}</Typography>
         </div>
         <div className="login-form">
-          <Typography variant="h4">Giriş</Typography>
+          <Typography variant="h4">{t("login.sign_in")}</Typography>
           <form onSubmit={login}>
             <TextField
               value={user.email}
@@ -44,7 +46,7 @@ const Login = (): JSX.Element => {
                 setUser({ ...user });
               }}
               type="text"
-              label="Email"
+              label={t("login.email")}
               fullWidth
               variant="filled"
               placeholder="Email adresinizi giriniz"
@@ -57,7 +59,7 @@ const Login = (): JSX.Element => {
                 setUser({ ...user });
               }}
               type="password"
-              label="Parola"
+              label={t("login.password")}
               fullWidth
               variant="filled"
               placeholder="Parolanızı giriniz"
@@ -65,7 +67,7 @@ const Login = (): JSX.Element => {
             ></TextField>
             {error && (
               <Typography variant="caption" className="error">
-                Email ya da parola yanlış, tekrar deneyin.
+                {t("login.wrong_email_or_password")}
               </Typography>
             )}
             <div className="login-btn">
@@ -75,7 +77,8 @@ const Login = (): JSX.Element => {
                 color="primary"
                 disabled={loading}
               >
-                {loading && <FaSpinner className="icon-spin" />}&nbsp;Giriş
+                {loading && <FaSpinner className="icon-spin" />}&nbsp;
+                {t("login.sign_in")}
               </Button>
             </div>
           </form>
