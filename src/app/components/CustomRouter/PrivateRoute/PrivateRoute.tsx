@@ -4,7 +4,7 @@ import AppContainer from "@components/AppContainer/AppContainer";
 import AuthService from "@views/Login/services/AuthService";
 
 interface PrivateRouteParams {
-  component: React.ComponentType<any> | any;
+  component: React.ReactNode;
 }
 
 const PrivateRoute = ({

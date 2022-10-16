@@ -23,7 +23,7 @@ import APP_CONSTANTS from "@constants/app-constants";
 const AppContainer = ({
   component: Component
 }: {
-  component: React.ComponentType<any> | any;
+  component: React.ReactNode;
 }): JSX.Element => {
   const location = useLocation();
   const classes = useStyles();
@@ -104,7 +104,7 @@ const AppContainer = ({
           </ListItem>
         </List>
       </Drawer>
-      <Component />
+      {Component}
     </div>
   );
 };

@@ -31,7 +31,7 @@ const App = (): JSX.Element => {
         <CustomBrowserRouter history={history}>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<PrivateRoute component={Home} />} />
+            <Route path="/" element={<PrivateRoute component={<Home />} />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </CustomBrowserRouter>

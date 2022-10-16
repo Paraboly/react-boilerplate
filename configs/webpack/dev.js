@@ -1,6 +1,7 @@
 const { resolve } = require("path");
 const { merge } = require("webpack-merge");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const commonConfig = require("./common");
 const env = require("dotenv").config({
   path: resolve(__dirname, "../../.env")
@@ -28,5 +29,15 @@ module.exports = merge(commonConfig, {
     }
   },
   devtool: "cheap-module-source-map",
-  plugins: [new ReactRefreshWebpackPlugin()]
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+    new ESLintPlugin({
+      context: resolve(__dirname, "../../src"),
+      extensions: ["ts", "tsx"],
+      emitError: true,
+      emitWarning: true,
+      failOnError: true,
+      failOnWarning: false
+    })
+  ]
 });

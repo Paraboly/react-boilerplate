@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserHistory, Action, Location } from "history";
+import { BrowserHistory } from "history";
 import { Router } from "react-router-dom";
 
 interface CustomRouterProps {

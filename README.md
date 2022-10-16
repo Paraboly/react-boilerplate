@@ -10,10 +10,9 @@
 - [ ] Refactoring routing
 - [ ] Refactoring app navigation
 - [ ] Add lazy-loading support
-- [ ] Prettier config
-- [ ] Eslint config
-- [ ] Editor config
-- [ ] Haskey integration
+- [x] Prettier config
+- [x] Eslint config
+- [x] Haskey integration
 - [ ] Github actions
 - [ ] Fix multi-times hmr triggers
 
