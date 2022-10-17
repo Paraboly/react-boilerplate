@@ -67,5 +67,6 @@
 
 - **[Sentry](https://docs.sentry.io/platforms/javascript/)** (6.x)
 - **[Logrocket](https://docs.logrocket.com/reference/javascript-sdk-api)** (3.x)
+- **[WebVitals](https://github.com/GoogleChrome/web-vitals)**
 
 _Boilerplate: [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)_
