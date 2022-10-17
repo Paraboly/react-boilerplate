@@ -22,5 +22,5 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-explicit-any": "warn"
   },
-  ignorePatterns: ["src/global.d.ts"]
+  ignorePatterns: ["src/global.d.ts", "configs/*"]
 };
