@@ -34,6 +34,27 @@
 | `npm run test`       | Run tests                                                                                 |
 | `npm run lint`       | Run linter                                                                                |
 | `npm run lint -- --fix` | Run linter and fix issues                                                                 |
+---
+## Project Structure:
+    - config: contains webpack configs
+    - nginx: contains nginx configs
+    - src:
+        - app: contains platform core features
+            - components: shared components across the app
+            - constants: shared constants across the app
+            - services: shared services across the app
+            - views: app root views eg: Login, Home, Settings etc.
+        - assets: contains i18n and other media assets
+        - config: contains app root configs
+        - modules: lazy-loaded modules
+
+---
+## File Naming Guide
+    - Component: UserDetails.tsx
+    - Service: User.service.ts
+    - Module: User.module.ts
+    - Constant: user.constant.ts
+    - Config: user.config.ts
 
 ---
 ## Features
