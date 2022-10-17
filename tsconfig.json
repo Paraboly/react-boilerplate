@@ -50,6 +50,7 @@
       "@views/*": ["app/views/*"],
       "@components/*": ["app/components/*"],
       "@services/*": ["app/services/*"],
+      "@modules/*": ["modules/*"],
       "@constants/*": ["app/constants/*"],
       "@models/*": ["app/Models/*"],
       "@assets/*": ["assets/*"]

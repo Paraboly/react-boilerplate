@@ -7,9 +7,9 @@
 - [x] Initial working version
 - [x] Refactoring webpack
 - [x] i18n support
-- [ ] Refactoring routing
-- [ ] Refactoring app navigation
-- [ ] Add lazy-loading support
+- [x] Refactoring routing
+- [x] Refactoring app navigation
+- [x] Add lazy-loading support
 - [x] Prettier config
 - [x] Eslint config
 - [x] Haskey integration

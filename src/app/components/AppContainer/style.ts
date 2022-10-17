@@ -46,7 +46,15 @@ const useStyles = makeStyles((theme: Theme) =>
       position: "absolute",
       width: drawerWidth,
       flexShrink: 0,
-      whiteSpace: "nowrap"
+      whiteSpace: "nowrap",
+      "& .active-nav-item": {
+        color: "#3F51B5",
+        fontWeight: 600,
+        "& .MuiListItemIcon-root": {
+          color: "#3F51B5",
+          fontWeight: 600
+        }
+      }
     },
     drawerOpen: {
       width: drawerWidth,

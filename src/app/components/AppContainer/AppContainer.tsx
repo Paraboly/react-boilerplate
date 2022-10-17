@@ -19,6 +19,7 @@ import { Link, useLocation } from "react-router-dom";
 import AuthService from "@views/Login/services/Auth.service";
 import useStyles from "./style";
 import APP_CONSTANT from "@constants/app.constant";
+import DynamicNav from "@components/DynamicNav/DynamicNav";
 
 const AppContainer = ({
   component: Component
@@ -92,6 +93,8 @@ const AppContainer = ({
             <ListItemText primary="Home" />
           </ListItem>
         </List>
+        <Divider />
+        <DynamicNav onRouteClick={() => setOpen(false)} />
         <Divider />
         <List>
           <ListItem button onClick={AuthService.logout}>
