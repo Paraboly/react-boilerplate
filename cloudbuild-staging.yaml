@@ -1,16 +1,16 @@
 steps:
   - name: "gcr.io/cloud-builders/docker"
     entrypoint: "bash"
-    args: ["-c", "docker pull gcr.io/test-111/test-web:main || exit 0"]
+    args: ["-c", "docker pull gcr.io/test-111/test-web:staging || exit 0"]
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
         "build",
         "-t",
-        "gcr.io/test-111/test-web:main",
+        "gcr.io/test-111/test-web:staging",
         "--cache-from",
-        "gcr.io/test-111/test-web:main",
+        "gcr.io/test-111/test-web:staging",
         "."
       ]
-images: ["gcr.io/test-111/test-web:main"]
+images: ["gcr.io/test-111/test-web:staging"]
 timeout: 900s
